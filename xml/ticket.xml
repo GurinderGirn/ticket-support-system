@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<supportticket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/ticket.xsd">
+  <ticket ticketNumber="101" category="technical" status="on-going">
+    <dateOfIssue>2018-02-01</dateOfIssue>
+    <clientId>102</clientId>
+    <staffId>101</staffId>
+    <supportMessages>
+      <message msgDate="2018-02-02" userId="102">I would like to know about technical issues regarding software that i have downloaded.</message>
+      <message msgDate="2018-02-03" userId="101">Thank You for using software. would you please tell us detail of software.</message>
+    </supportMessages>
+  </ticket>
+  <ticket ticketNumber="102" category="sales" status="on-going">
+    <dateOfIssue>2018-02-11</dateOfIssue>
+    <clientId>102</clientId>
+    <staffId>101</staffId>
+    <supportMessages>
+      <message msgDate="2018-02-12" userId="102">I want to download a XYZ software. would you tell me price for software.</message>
+      <message msgDate="2018-02-13" userId="101">I would like to know version of software that you want to download.</message>
+    </supportMessages>
+  </ticket>
+  <ticket ticketNumber="103" category="maintenance" status="resolved">
+    <dateOfIssue>2018-01-28</dateOfIssue>
+    <resolvedDate>2018-02-10</resolvedDate>
+    <clientId>104</clientId>
+    <staffId>103</staffId>
+    <supportMessages>
+      <message msgDate="2018-01-29" userId="104">Is there any maintenance charges for XYZ software?</message>
+      <message msgDate="2018-01-30" userId="103">No, there are not any maintenance charges associated with softwares.</message>
+      <message msgDate="2018-01-30" userId="103">Your issue has been resolved and ticket status is set to resolved.</message>
+    </supportMessages>
+  </ticket>
+  <ticket ticketNumber="104" category="maintenance" status="on-going">
+    <dateOfIssue>2018-01-28</dateOfIssue>
+    <resolvedDate>2018-02-10</resolvedDate>
+    <clientId>104</clientId>
+    <staffId>103</staffId>
+    <supportMessages>
+      <message msgDate="2018-01-29" userId="104">Is there any maintenance charges for XYZ software?</message>
+      <message msgDate="2018-01-30" userId="103">No, there are not any maintenance charges associated with softwares.</message>
+    </supportMessages>
+  </ticket>
+
+</supportticket>

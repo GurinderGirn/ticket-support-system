@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- user element start -->
+  <xs:element name="users">
+    <xs:complexType>
+	  <xs:sequence>
+	    <!-- user element start -->
+		<xs:element name="user" minOccurs="0" maxOccurs="unbounded">
+		  <xs:complexType>
+		    <xs:sequence>
+			  <xs:element name="userName">
+			    <xs:complexType>
+				  <xs:sequence>
+				    <xs:element name="firstName" type="xs:string" />
+					<xs:element name="middleName" type="xs:string" minOccurs="0" />
+					<xs:element name="lastName" type="xs:string" />
+				  </xs:sequence>
+				</xs:complexType>
+			  </xs:element>
+			  <xs:element name="userEmail" type="email" />
+			  <xs:element name="password" type="xs:string" />
+			</xs:sequence>
+			<!-- attribute list start -->
+			<xs:attribute name="userId" type="idPattern" use="required" />
+			<xs:attribute name="type" type="staffType" use="required" />
+			<!-- attribute list end -->
+		  </xs:complexType>
+		</xs:element>
+		<!-- user element end -->
+	  </xs:sequence>
+	</xs:complexType>
+  </xs:element>
+  <!-- user element end -->
+  <xs:simpleType name="email">
+    <xs:restriction base="xs:string">
+	  <xs:pattern value="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})" />
+	</xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="idPattern">
+    <xs:restriction base="xs:string">
+	  <xs:pattern value="\d+" />
+	</xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="staffType">
+    <xs:restriction base="xs:string">
+	  <xs:enumeration value="staff" />
+	  <xs:enumeration value="client" />
+	</xs:restriction>
+  </xs:simpleType>
+</xs:schema>

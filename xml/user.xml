@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/user.xsd">
+  <user userId="101" type="staff">
+    <userName>
+      <firstName>Gurinder</firstName>
+      <middleName>Kaur</middleName>
+      <lastName>Girn</lastName>
+    </userName>
+    <userEmail>gurinder@example.com</userEmail>
+    <password>1234</password>
+  </user>
+  <user userId="102" type="client">
+    <userName>
+      <firstName>David</firstName>
+      <lastName>Parker</lastName>
+    </userName>
+    <userEmail>david@example.com</userEmail>
+    <password>1234</password>
+  </user>
+  <user userId="103" type="staff">
+    <userName>
+      <firstName>Sam</firstName>
+      <lastName>Marsh</lastName>
+    </userName>
+    <userEmail>sammarsh@example.com</userEmail>
+    <password>1234</password>
+  </user>
+  <user userId="104" type="client">
+    <userName>
+      <firstName>Gurinder</firstName>
+      <lastName>Girn</lastName>
+    </userName>
+    <userEmail>gurinder@example.com</userEmail>
+    <password>1234</password>
+  </user>
+</users>

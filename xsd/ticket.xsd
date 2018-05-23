@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!--support ticket schema start  -->
+  <xs:element name="supportticket">
+    <xs:complexType>
+	  <xs:sequence>
+	    <!--ticket element start -->
+		<xs:element name="ticket" minOccurs="0" maxOccurs="unbounded">
+		  <xs:complexType>
+		    <xs:sequence>
+			  <!--ticket elements start -->
+			    <xs:element name="dateOfIssue" type="xs:date" />
+				<xs:element name="resolvedDate" type="xs:date" minOccurs="0" />
+				<xs:element name="clientId" type="clientId" />
+				<xs:element name="staffId" type="staffId" />
+				<xs:element name="supportMessages">
+				  <xs:complexType>
+				    <xs:sequence>
+					  <xs:element name="message" maxOccurs="unbounded" />
+					</xs:sequence>
+					<xs:attribute name="msgDate" type="xs:date" />
+					<xs:attribute name="userId" type="clientId" />
+				  </xs:complexType>
+				</xs:element>
+			  <!-- ticket elements end -->
+			</xs:sequence>
+			<!-- attribute list start-->
+			<xs:attribute name="ticketNumber" type="number" use="required" />
+			<xs:attribute name="category" type="xs:string" use="required" />
+			<xs:attribute name="status" type="status" use="required" />
+			<!--attribute list end -->
+		  </xs:complexType>
+		</xs:element>
+		<!--ticket element end -->
+	  </xs:sequence>
+	</xs:complexType>  
+  </xs:element>
+  <!--support ticket schema end -->
+  <!-- user defined data types -->
+  <xs:simpleType name="number">
+    <xs:restriction base="xs:string">
+	  <xs:pattern value="\d+" />
+	</xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="status">
+    <xs:restriction base="xs:string">
+	  <xs:enumeration value="on-going" />
+	  <xs:enumeration value="resolved" />
+	</xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="clientId">
+    <xs:restriction base="xs:string">
+	  <xs:pattern value="\d+" />
+	</xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="staffId">
+    <xs:restriction base="xs:string">
+	  <xs:pattern value="\d+" />
+	</xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

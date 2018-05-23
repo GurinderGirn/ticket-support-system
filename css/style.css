@@ -1,0 +1,11 @@
+.main-page
+{
+    height:100vh;
+    background-size:cover;
+}
+.containerMargin {
+    margin-bottom:8em;
+}
+.borderBottom {
+    border-bottom: 1px solid white;
+}
